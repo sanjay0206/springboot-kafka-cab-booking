@@ -14,7 +14,6 @@ import java.util.Map;
 @RestController
 @RequestMapping("/location")
 public class CabLocationController {
-
     @Autowired
     private CabLocationService cabLocationService;
 
@@ -35,5 +34,4 @@ public class CabLocationController {
         }
         return new ResponseEntity<>(Map.of("message", "Location Updated"), HttpStatus.OK);
     }
-
 }
