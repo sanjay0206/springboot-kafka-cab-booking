@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CabLocationService {
+
     // To publish the location we have to use Kafka template
     // Kafka template will help us to store data to the kafka cluster
     // what key-value, which topic, map combination
@@ -18,4 +19,5 @@ public class CabLocationService {
     public void updateLocation(String location) {
         kafkaTemplate.send(AppConstant.TOPIC_NAME, location);
     }
+
 }
