@@ -1,5 +1,4 @@
 ## Spring Boot Cab Booking with Kafka Streaming
-
 ### What is Apache Kafka?
 ![Diagram](./docs/Picture1.png)
 
