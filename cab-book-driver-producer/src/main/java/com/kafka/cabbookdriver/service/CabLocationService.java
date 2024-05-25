@@ -16,9 +16,8 @@ public class CabLocationService {
     @Autowired
     private KafkaTemplate<String, Object> kafkaTemplate;
 
-    public boolean updateLocation(String location) {
+    public void updateLocation(String location) {
         kafkaTemplate.send(AppConstant.TOPIC_NAME, location);
-        return true;
     }
 
 }
