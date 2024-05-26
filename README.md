@@ -17,9 +17,7 @@ Kafka is designed to handle large volumes of data, allowing seamless communicati
 It is characterized by its
 
 1. Scalability
-
 2. Fault-tolerance
-
 3. high throughput
 
 Making it a popular choice for organizations across various industries to manage and process streaming data efficiently. Kafka is often used for use cases such as log aggregation, real-time analytics, monitoring, and messaging systems.
