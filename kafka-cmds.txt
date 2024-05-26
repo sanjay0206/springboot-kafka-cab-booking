@@ -1,0 +1,24 @@
+1) Start Zookeeper server => C:\Users\sanja\kafka>
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+2) Start Kafka server => C:\Users\sanja\kafka>
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+3) Create a topic here => C:\Users\sanja\kafka\bin\windows>
+kafka-topics.bat --create --topic test --replication-factor 1 --partitions 1 --bootstrap-server localhost:9092
+
+4) Create a Kafka Broker => C:\Users\sanja\kafka\bin\windows> 
+kafka-console-producer.bat --broker-list localhost:9092 --topic test
+>Hello this is Kafka
+>
+
+step 3: create consumer
+C:\Users\sanja\kafka\bin\windows>
+kafka-console-consumer.bat --topic test --bootstrap-server localhost:9092 --from-beginning
+Hello this is Kafka
+
+step 4: Delete a topic 
+kafka-topics.bat --delete --topic test --bootstrap-server localhost:9092
+
+step 5: list all topics
+kafka-topics.bat --list --bootstrap-server localhost:9092
